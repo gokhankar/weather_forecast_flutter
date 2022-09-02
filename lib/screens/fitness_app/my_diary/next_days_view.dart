@@ -103,9 +103,6 @@ class MealsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // print("from next days view, meals view : ${nextDay!.day.toString()}");
-    // print("from next days view, meals view : ${nextDay!.iconURL.toString()}");
-    // print("from next days view, meals view nextdaydata : ${nextDaysData}");
     return AnimatedBuilder(
       animation: animationController,
       builder: (_, __) {
@@ -238,9 +235,17 @@ class MealsView extends StatelessWidget {
                     child: SizedBox(
                       width: 80,
                       height: 80,
-                      child: Image.network(nextDay!.iconURL.toString()),
+                      child: Image.network(
+                        nextDay!.iconURL.toString(),
+                        errorBuilder: (BuildContext context, Object exception,
+                            StackTrace? stackTrace) {
+                          return Image.asset(
+                            'assets/images/sunny.png',
+                          );
+                        },
+                      ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

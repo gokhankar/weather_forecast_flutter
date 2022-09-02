@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_forecast_flutter/data/api_constants.dart';
 import 'package:weather_forecast_flutter/data/api_service.dart';
 import 'package:weather_forecast_flutter/models/weather_model.dart';
 import 'package:weather_forecast_flutter/screens/fitness_app/fitness_app_home_screen.dart';
@@ -23,9 +24,6 @@ class _HomeState extends State {
   @override
   void initState() {
     super.initState();
-    // weatherData.region = "İstanbulx";
-    // getWeatherData();
-    // print(weatherData.region);
     fToast = FToast();
     fToast.init(context);
   }
@@ -43,7 +41,7 @@ class _HomeState extends State {
         SizedBox(
           width: 12.0,
         ),
-        Text("Server error"),
+        Text("Server error! Showing demo page..."),
       ],
     ),
   );
@@ -89,23 +87,24 @@ class _HomeState extends State {
     var weatherFuture = (await ApiService().getWeather(city));
     if (weatherFuture != null) {
       setState(() {
-        weatherData = weatherFuture;
-        // weatherData = weatherFuture ?? Weather(region: "istanbul");
-        // print("from home.dart :${this.weatherData.nextDays?[0].day.toString()}");
+        weatherData = weatherFuture!;
+        isWeatherDataReady = true;
       });
-      isWeatherDataReady = true;
     } else {
-      print("home getWeatherData else: ");
-      isWeatherDataReady = false;
       _showToast();
+      print("home getWeatherData else: ");
+      Weather _model = weatherFromJson(ApiConstants.errorCondition);
+      weatherFuture = _model;
+      setState(() {
+        weatherData = weatherFuture!;
+        isWeatherDataReady = true;
+      });
     }
   }
 
   void refresh(dynamic childvalue) {
     setState(() {
       weatherData.region = childvalue;
-      // print("from setstate : $childvalue");
-      // print("from setstate2  : ${weatherData.region}");
       getWeatherData(childvalue);
       isLoading = true;
     });
@@ -121,8 +120,6 @@ class _HomeState extends State {
     setState(() {
       isLoading = false;
       isWeatherDataReady = false;
-      print("home changeisWeatherDataReady $isWeatherDataReady ");
-      print("home changeisWeatherDataReady2 $isLoading ");
     });
   }
 
