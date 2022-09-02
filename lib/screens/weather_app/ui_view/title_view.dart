@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 
 class TitleView extends StatelessWidget {
   const TitleView(
@@ -22,7 +22,7 @@ class TitleView extends StatelessWidget {
       animation: animationController,
       builder: (BuildContext context, _) {
         return Material(
-          color: FitnessAppTheme.background,
+          color: WeatherAppTheme.background,
           child: FadeTransition(
             opacity: animation,
             child: Transform(
@@ -37,11 +37,11 @@ class TitleView extends StatelessWidget {
                         titleTxt,
                         textAlign: TextAlign.left,
                         style: const TextStyle(
-                          fontFamily: FitnessAppTheme.fontName,
+                          fontFamily: WeatherAppTheme.fontName,
                           fontWeight: FontWeight.w500,
                           fontSize: 18,
                           letterSpacing: 0.5,
-                          color: FitnessAppTheme.lightText,
+                          color: WeatherAppTheme.lightText,
                         ),
                       ),
                     ),
@@ -53,28 +53,7 @@ class TitleView extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 8),
                         child: Row(
-                          children: <Widget>[
-                            // Text(
-                            //   subTxt,
-                            //   textAlign: TextAlign.left,
-                            //   style: const TextStyle(
-                            //     fontFamily: FitnessAppTheme.fontName,
-                            //     fontWeight: FontWeight.normal,
-                            //     fontSize: 16,
-                            //     letterSpacing: 0.5,
-                            //     color: FitnessAppTheme.nearlyDarkBlue,
-                            //   ),
-                            // ),
-                            // const SizedBox(
-                            //   height: 38,
-                            //   width: 26,
-                            //   child: Icon(
-                            //     Icons.arrow_forward,
-                            //     color: FitnessAppTheme.darkText,
-                            //     size: 18,
-                            //   ),
-                            // ),
-                          ],
+                          children: <Widget>[],
                         ),
                       ),
                     )

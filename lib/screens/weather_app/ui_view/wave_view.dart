@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math.dart' as vector;
 
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 
 class WaveView extends StatefulWidget {
   const WaveView({Key? key, this.percentageValue = 100.0}) : super(key: key);
@@ -90,7 +90,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
               clipper: WaveClipper(animationController.value, animList1),
               child: Container(
                 decoration: BoxDecoration(
-                  color: FitnessAppTheme.nearlyDarkBlue.withOpacity(0.5),
+                  color: WeatherAppTheme.nearlyDarkBlue.withOpacity(0.5),
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(80.0),
                       bottomLeft: Radius.circular(80.0),
@@ -98,8 +98,8 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                       topRight: Radius.circular(80.0)),
                   gradient: LinearGradient(
                     colors: <Color>[
-                      FitnessAppTheme.nearlyDarkBlue.withOpacity(0.2),
-                      FitnessAppTheme.nearlyDarkBlue.withOpacity(0.5)
+                      WeatherAppTheme.nearlyDarkBlue.withOpacity(0.2),
+                      WeatherAppTheme.nearlyDarkBlue.withOpacity(0.5)
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -111,11 +111,11 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
               clipper: WaveClipper(animationController.value, animList2),
               child: Container(
                 decoration: BoxDecoration(
-                  color: FitnessAppTheme.nearlyDarkBlue,
+                  color: WeatherAppTheme.nearlyDarkBlue,
                   gradient: LinearGradient(
                     colors: <Color>[
-                      FitnessAppTheme.nearlyDarkBlue.withOpacity(0.4),
-                      FitnessAppTheme.nearlyDarkBlue
+                      WeatherAppTheme.nearlyDarkBlue.withOpacity(0.4),
+                      WeatherAppTheme.nearlyDarkBlue
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -139,11 +139,11 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                       widget.percentageValue.round().toString(),
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        fontFamily: FitnessAppTheme.fontName,
+                        fontFamily: WeatherAppTheme.fontName,
                         fontWeight: FontWeight.w500,
                         fontSize: 24,
                         letterSpacing: 0.0,
-                        color: FitnessAppTheme.white,
+                        color: WeatherAppTheme.white,
                       ),
                     ),
                     const Padding(
@@ -152,11 +152,11 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                         '%',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontFamily: FitnessAppTheme.fontName,
+                          fontFamily: WeatherAppTheme.fontName,
                           fontWeight: FontWeight.w500,
                           fontSize: 14,
                           letterSpacing: 0.0,
-                          color: FitnessAppTheme.white,
+                          color: WeatherAppTheme.white,
                         ),
                       ),
                     ),
@@ -178,7 +178,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                   width: 2,
                   height: 2,
                   decoration: BoxDecoration(
-                    color: FitnessAppTheme.white.withOpacity(0.4),
+                    color: WeatherAppTheme.white.withOpacity(0.4),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -198,7 +198,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                   width: 4,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: FitnessAppTheme.white.withOpacity(0.4),
+                    color: WeatherAppTheme.white.withOpacity(0.4),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -218,7 +218,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                   width: 3,
                   height: 3,
                   decoration: BoxDecoration(
-                    color: FitnessAppTheme.white.withOpacity(0.4),
+                    color: WeatherAppTheme.white.withOpacity(0.4),
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -235,7 +235,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
                   width: 4,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: FitnessAppTheme.white.withOpacity(
+                    color: WeatherAppTheme.white.withOpacity(
                         animationController.status == AnimationStatus.reverse
                             ? 0.0
                             : 0.4),
@@ -248,7 +248,7 @@ class _WaveViewState extends State<WaveView> with TickerProviderStateMixin {
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1,
-                  child: Image.asset('assets/fitness_app/bottle.png'),
+                  child: Image.asset('assets/weather_app/bottle.png'),
                 ),
               ],
             )

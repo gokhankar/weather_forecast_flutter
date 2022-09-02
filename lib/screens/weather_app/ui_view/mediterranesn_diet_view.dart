@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../../../models/weather_model.dart';
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 
 class MediterranesnDietView extends StatelessWidget {
   final Weather weatherData;
@@ -32,7 +32,7 @@ class MediterranesnDietView extends StatelessWidget {
                   left: 24, right: 24, top: 16, bottom: 18),
               child: Container(
                 decoration: BoxDecoration(
-                  color: FitnessAppTheme.white,
+                  color: WeatherAppTheme.white,
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8.0),
                       bottomLeft: Radius.circular(8.0),
@@ -40,7 +40,7 @@ class MediterranesnDietView extends StatelessWidget {
                       topRight: Radius.circular(68.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                        color: FitnessAppTheme.grey.withOpacity(0.2),
+                        color: WeatherAppTheme.grey.withOpacity(0.2),
                         offset: const Offset(1.1, 1.1),
                         blurRadius: 10.0),
                   ],
@@ -86,11 +86,11 @@ class MediterranesnDietView extends StatelessWidget {
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                   fontFamily:
-                                                      FitnessAppTheme.fontName,
+                                                      WeatherAppTheme.fontName,
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 16,
                                                   letterSpacing: -0.1,
-                                                  color: FitnessAppTheme.grey
+                                                  color: WeatherAppTheme.grey
                                                       .withOpacity(0.5),
                                                 ),
                                               ),
@@ -123,12 +123,12 @@ class MediterranesnDietView extends StatelessWidget {
                                                     softWrap: false,
                                                     style: const TextStyle(
                                                       fontFamily:
-                                                          FitnessAppTheme
+                                                          WeatherAppTheme
                                                               .fontName,
                                                       fontWeight:
                                                           FontWeight.w600,
                                                       fontSize: 16,
-                                                      color: FitnessAppTheme
+                                                      color: WeatherAppTheme
                                                           .darkerText,
                                                     ),
                                                   ),
@@ -171,11 +171,11 @@ class MediterranesnDietView extends StatelessWidget {
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                   fontFamily:
-                                                      FitnessAppTheme.fontName,
+                                                      WeatherAppTheme.fontName,
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 16,
                                                   letterSpacing: -0.1,
-                                                  color: FitnessAppTheme.grey
+                                                  color: WeatherAppTheme.grey
                                                       .withOpacity(0.5),
                                                 ),
                                               ),
@@ -205,12 +205,12 @@ class MediterranesnDietView extends StatelessWidget {
                                                     textAlign: TextAlign.center,
                                                     style: const TextStyle(
                                                       fontFamily:
-                                                          FitnessAppTheme
+                                                          WeatherAppTheme
                                                               .fontName,
                                                       fontWeight:
                                                           FontWeight.w600,
                                                       fontSize: 16,
-                                                      color: FitnessAppTheme
+                                                      color: WeatherAppTheme
                                                           .darkerText,
                                                     ),
                                                   ),
@@ -224,13 +224,13 @@ class MediterranesnDietView extends StatelessWidget {
                                                     textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                       fontFamily:
-                                                          FitnessAppTheme
+                                                          WeatherAppTheme
                                                               .fontName,
                                                       fontWeight:
                                                           FontWeight.w600,
                                                       fontSize: 12,
                                                       letterSpacing: -0.2,
-                                                      color: FitnessAppTheme
+                                                      color: WeatherAppTheme
                                                           .grey
                                                           .withOpacity(0.5),
                                                     ),
@@ -259,13 +259,13 @@ class MediterranesnDietView extends StatelessWidget {
                                       width: 100,
                                       height: 100,
                                       decoration: BoxDecoration(
-                                        color: FitnessAppTheme.white,
+                                        color: WeatherAppTheme.white,
                                         borderRadius: const BorderRadius.all(
                                           Radius.circular(100.0),
                                         ),
                                         border: Border.all(
                                             width: 4,
-                                            color: FitnessAppTheme
+                                            color: WeatherAppTheme
                                                 .nearlyDarkBlue
                                                 .withOpacity(0.2)),
                                       ),
@@ -300,7 +300,7 @@ class MediterranesnDietView extends StatelessWidget {
                       child: Container(
                         height: 2,
                         decoration: const BoxDecoration(
-                          color: FitnessAppTheme.background,
+                          color: WeatherAppTheme.background,
                           borderRadius: BorderRadius.all(Radius.circular(4.0)),
                         ),
                       ),
@@ -319,11 +319,11 @@ class MediterranesnDietView extends StatelessWidget {
                                   'Humidity',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    fontFamily: FitnessAppTheme.fontName,
+                                    fontFamily: WeatherAppTheme.fontName,
                                     fontWeight: FontWeight.w500,
                                     fontSize: 16,
                                     letterSpacing: -0.2,
-                                    color: FitnessAppTheme.darkText,
+                                    color: WeatherAppTheme.darkText,
                                   ),
                                 ),
                                 Padding(
@@ -364,11 +364,11 @@ class MediterranesnDietView extends StatelessWidget {
                                     "${weatherData.currentConditions?.humidity}",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontFamily: FitnessAppTheme.fontName,
+                                      fontFamily: WeatherAppTheme.fontName,
                                       fontWeight: FontWeight.w600,
                                       fontSize: 12,
                                       color:
-                                          FitnessAppTheme.grey.withOpacity(0.5),
+                                          WeatherAppTheme.grey.withOpacity(0.5),
                                     ),
                                   ),
                                 ),
@@ -387,11 +387,11 @@ class MediterranesnDietView extends StatelessWidget {
                                       'Precipitation',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
-                                        fontFamily: FitnessAppTheme.fontName,
+                                        fontFamily: WeatherAppTheme.fontName,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 16,
                                         letterSpacing: -0.2,
-                                        color: FitnessAppTheme.darkText,
+                                        color: WeatherAppTheme.darkText,
                                       ),
                                     ),
                                     Padding(
@@ -433,10 +433,10 @@ class MediterranesnDietView extends StatelessWidget {
                                         '${weatherData.currentConditions?.precip}',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontFamily: FitnessAppTheme.fontName,
+                                          fontFamily: WeatherAppTheme.fontName,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 12,
-                                          color: FitnessAppTheme.grey
+                                          color: WeatherAppTheme.grey
                                               .withOpacity(0.5),
                                         ),
                                       ),
@@ -457,11 +457,11 @@ class MediterranesnDietView extends StatelessWidget {
                                     const Text(
                                       'Wind',
                                       style: TextStyle(
-                                        fontFamily: FitnessAppTheme.fontName,
+                                        fontFamily: WeatherAppTheme.fontName,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 16,
                                         letterSpacing: -0.2,
-                                        color: FitnessAppTheme.darkText,
+                                        color: WeatherAppTheme.darkText,
                                       ),
                                     ),
                                     Padding(
@@ -503,10 +503,10 @@ class MediterranesnDietView extends StatelessWidget {
                                         '${weatherData.currentConditions?.wind?.km} km',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontFamily: FitnessAppTheme.fontName,
+                                          fontFamily: WeatherAppTheme.fontName,
                                           fontWeight: FontWeight.w600,
                                           fontSize: 12,
-                                          color: FitnessAppTheme.grey
+                                          color: WeatherAppTheme.grey
                                               .withOpacity(0.5),
                                         ),
                                       ),

@@ -41,7 +41,7 @@ flutter_icons:
 flutter:
   assets:
     - assets/images/
-    - assets/fitness_app/
+    - assets/weather_app/
     - assets/icon/
 
   uses-material-design: true

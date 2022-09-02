@@ -11,7 +11,6 @@ class ApiService {
         Weather _model = weatherFromJson(response.body);
         // print("api services _model: ${_model.region}");
         // print("_model: ${_model.currentConditions?.dayhour.toString()}");
-
         return _model;
       }
     } catch (e) {
@@ -20,7 +19,5 @@ class ApiService {
     }
   }
 
-  get weatherData {
-    // getWeather(city);
-  }
+  get weatherData {}
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 
 class GlassView extends StatelessWidget {
   const GlassView(
@@ -38,12 +38,6 @@ class GlassView extends StatelessWidget {
                                 bottomLeft: Radius.circular(8.0),
                                 bottomRight: Radius.circular(8.0),
                                 topRight: Radius.circular(8.0)),
-                            // boxShadow: <BoxShadow>[
-                            //   BoxShadow(
-                            //       color: FintnessAppTheme.grey.withOpacity(0.2),
-                            //       offset: Offset(1.1, 1.1),
-                            //       blurRadius: 10.0),
-                            // ],
                           ),
                           child: Column(
                             children: <Widget>[
@@ -54,11 +48,11 @@ class GlassView extends StatelessWidget {
                                   'The table down indicates weather forecast of your location for 8 days',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                    fontFamily: FitnessAppTheme.fontName,
+                                    fontFamily: WeatherAppTheme.fontName,
                                     fontWeight: FontWeight.w500,
                                     fontSize: 14,
                                     letterSpacing: 0.0,
-                                    color: FitnessAppTheme.nearlyDarkBlue
+                                    color: WeatherAppTheme.nearlyDarkBlue
                                         .withOpacity(0.6),
                                   ),
                                 ),
@@ -74,7 +68,7 @@ class GlassView extends StatelessWidget {
                           width: 80,
                           height: 80,
                           child:
-                              Image.asset('assets/fitness_app/temperature.png'),
+                              Image.asset('assets/weather_app/temperature.png'),
                         ),
                       )
                     ],

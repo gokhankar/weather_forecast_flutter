@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_forecast_flutter/data/api_constants.dart';
 import 'package:weather_forecast_flutter/data/api_service.dart';
 import 'package:weather_forecast_flutter/models/weather_model.dart';
-import 'package:weather_forecast_flutter/screens/fitness_app/fitness_app_home_screen.dart';
+import 'package:weather_forecast_flutter/screens/weather_app/weather_app_home_screen.dart';
 import 'package:weather_forecast_flutter/widgets/autocomplete_basic.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -60,7 +60,7 @@ class _HomeState extends State {
                         textAlign: TextAlign.center,
                       ),
                     )
-                  : FitnessAppHomeScreen(
+                  : WeatherAppHomeScreen(
                       weatherData: weatherData,
                       changeisWeatherDataReady: changeisWeatherDataReady,
                     ))
@@ -68,7 +68,7 @@ class _HomeState extends State {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     SizedBox(height: !isTappedInput ? 100 : 0),
-                    Image.asset('assets/fitness_app/symbol.png',
+                    Image.asset('assets/weather_app/symbol.png',
                         width: !isTappedInput ? 100 : 0,
                         height: !isTappedInput ? 100 : 0),
                     SizedBox(height: !isTappedInput ? 40 : 0),

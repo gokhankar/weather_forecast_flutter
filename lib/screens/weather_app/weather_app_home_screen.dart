@@ -3,29 +3,29 @@ import 'package:weather_forecast_flutter/screens/home.dart';
 
 import '../../models/weather_model.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';
-import 'fitness_app_theme.dart';
+import 'weather_app_theme.dart';
 import 'models/tab_icon_data.dart';
 import 'my_diary/my_diary_screen.dart';
 import 'training/training_screen.dart';
 
-class FitnessAppHomeScreen extends StatefulWidget {
+class WeatherAppHomeScreen extends StatefulWidget {
   late Weather weatherData;
   final Function(dynamic selection) changeisWeatherDataReady;
 
   // Weather weatherData = Weather(region: "İstanbulx");
-  FitnessAppHomeScreen(
+  WeatherAppHomeScreen(
       {required this.weatherData, required this.changeisWeatherDataReady});
 
   @override
-  _FitnessAppHomeScreenState createState() => _FitnessAppHomeScreenState();
+  _WeatherAppHomeScreenState createState() => _WeatherAppHomeScreenState();
 }
 
-class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
+class _WeatherAppHomeScreenState extends State<WeatherAppHomeScreen>
     with TickerProviderStateMixin {
   List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
   Widget tabBody = Container(
-    color: FitnessAppTheme.background,
+    color: WeatherAppTheme.background,
   );
 
   late final AnimationController animationController;
@@ -54,7 +54,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
   Widget build(BuildContext context) {
     // print("finessAppHomeScreen : ${widget.weatherData.region}");
     return Material(
-      color: FitnessAppTheme.background,
+      color: WeatherAppTheme.background,
       child: FutureBuilder<bool>(
         future: getData(),
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {

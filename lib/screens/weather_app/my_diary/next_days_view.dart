@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weather_forecast_flutter/models/weather_model.dart';
-import 'package:weather_forecast_flutter/screens/fitness_app/models/next_days_list_data.dart';
+import 'package:weather_forecast_flutter/screens/weather_app/models/next_days_list_data.dart';
 
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 import '../models/next_days_list_data.dart';
 
 class NextDaysView extends StatefulWidget {
@@ -152,11 +152,11 @@ class MealsView extends StatelessWidget {
                               nextDay!.day.toString(),
                               textAlign: TextAlign.center,
                               style: const TextStyle(
-                                fontFamily: FitnessAppTheme.fontName,
+                                fontFamily: WeatherAppTheme.fontName,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                                 letterSpacing: 0.2,
-                                color: FitnessAppTheme.white,
+                                color: WeatherAppTheme.white,
                               ),
                             ),
                             Expanded(
@@ -169,13 +169,12 @@ class MealsView extends StatelessWidget {
                                     Expanded(
                                       child: Text(
                                         nextDay!.comment.toString(),
-                                        // nextDaysData.meals.join('\n'),
                                         style: const TextStyle(
-                                          fontFamily: FitnessAppTheme.fontName,
+                                          fontFamily: WeatherAppTheme.fontName,
                                           fontWeight: FontWeight.w500,
                                           fontSize: 10,
                                           letterSpacing: 0.2,
-                                          color: FitnessAppTheme.white,
+                                          color: WeatherAppTheme.white,
                                         ),
                                       ),
                                     ),
@@ -190,11 +189,11 @@ class MealsView extends StatelessWidget {
                                   nextDay!.maxTemp!.c.toString(),
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
-                                    fontFamily: FitnessAppTheme.fontName,
+                                    fontFamily: WeatherAppTheme.fontName,
                                     fontWeight: FontWeight.w500,
                                     fontSize: 24,
                                     letterSpacing: 0.2,
-                                    color: FitnessAppTheme.white,
+                                    color: WeatherAppTheme.white,
                                   ),
                                 ),
                                 const Padding(
@@ -202,11 +201,11 @@ class MealsView extends StatelessWidget {
                                   child: Text(
                                     " \u2103",
                                     style: TextStyle(
-                                      fontFamily: FitnessAppTheme.fontName,
+                                      fontFamily: WeatherAppTheme.fontName,
                                       fontWeight: FontWeight.w500,
                                       fontSize: 10,
                                       letterSpacing: 0.2,
-                                      color: FitnessAppTheme.white,
+                                      color: WeatherAppTheme.white,
                                     ),
                                   ),
                                 ),
@@ -224,7 +223,7 @@ class MealsView extends StatelessWidget {
                       width: 84,
                       height: 84,
                       decoration: BoxDecoration(
-                        color: FitnessAppTheme.nearlyWhite.withOpacity(0.2),
+                        color: WeatherAppTheme.nearlyWhite.withOpacity(0.2),
                         shape: BoxShape.circle,
                       ),
                     ),

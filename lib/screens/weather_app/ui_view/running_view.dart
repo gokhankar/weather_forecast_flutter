@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 
 class RunningView extends StatelessWidget {
   const RunningView(
@@ -31,7 +31,7 @@ class RunningView extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 16, bottom: 16),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: FitnessAppTheme.white,
+                            color: WeatherAppTheme.white,
                             borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(8.0),
                                 bottomLeft: Radius.circular(8.0),
@@ -39,7 +39,7 @@ class RunningView extends StatelessWidget {
                                 topRight: Radius.circular(8.0)),
                             boxShadow: <BoxShadow>[
                               BoxShadow(
-                                  color: FitnessAppTheme.grey.withOpacity(0.4),
+                                  color: WeatherAppTheme.grey.withOpacity(0.4),
                                   offset: const Offset(1.1, 1.1),
                                   blurRadius: 10.0),
                             ],
@@ -55,7 +55,7 @@ class RunningView extends StatelessWidget {
                                   child: AspectRatio(
                                     aspectRatio: 1.714,
                                     child: Image.asset(
-                                        'assets/fitness_app/back.png'),
+                                        'assets/weather_app/back.png'),
                                   ),
                                 ),
                               ),
@@ -75,12 +75,12 @@ class RunningView extends StatelessWidget {
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontFamily:
-                                                FitnessAppTheme.fontName,
+                                                WeatherAppTheme.fontName,
                                             fontWeight: FontWeight.w500,
                                             fontSize: 14,
                                             letterSpacing: 0.0,
                                             color:
-                                                FitnessAppTheme.nearlyDarkBlue,
+                                                WeatherAppTheme.nearlyDarkBlue,
                                           ),
                                         ),
                                       ),
@@ -97,11 +97,11 @@ class RunningView extends StatelessWidget {
                                       'Passionate to learn new technologies, and design approaches. ',
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
-                                        fontFamily: FitnessAppTheme.fontName,
+                                        fontFamily: WeatherAppTheme.fontName,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 10,
                                         letterSpacing: 0.0,
-                                        color: FitnessAppTheme.grey
+                                        color: WeatherAppTheme.grey
                                             .withOpacity(0.5),
                                       ),
                                     ),
@@ -118,7 +118,7 @@ class RunningView extends StatelessWidget {
                         child: SizedBox(
                           width: 110,
                           height: 110,
-                          child: Image.asset('assets/fitness_app/runner.png'),
+                          child: Image.asset('assets/weather_app/runner.png'),
                         ),
                       )
                     ],

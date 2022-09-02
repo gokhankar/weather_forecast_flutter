@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../fitness_app_theme.dart';
+import '../weather_app_theme.dart';
 import '../models/tab_icon_data.dart';
 
 class BottomBarView extends StatefulWidget {
@@ -53,7 +53,7 @@ class _BottomBarViewState extends State<BottomBarView>
             return Transform(
               transform: Matrix4.translationValues(0.0, 0.0, 0.0),
               child: PhysicalShape(
-                color: FitnessAppTheme.white,
+                color: WeatherAppTheme.white,
                 elevation: 16.0,
                 clipper: TabClipper(
                     radius: Tween<double>(begin: 0.0, end: 1.0)
@@ -80,15 +80,6 @@ class _BottomBarViewState extends State<BottomBarView>
                                     widget.changeIndex(0);
                                   }),
                             ),
-                            // Expanded(
-                            //   child: TabIcons(
-                            //       tabIconData: widget.tabIconsList[1],
-                            //       removeAllSelect: () {
-                            //         setRemoveAllSelection(
-                            //             widget.tabIconsList[1]);
-                            //         widget.changeIndex(1);
-                            //       }),
-                            // ),
                             SizedBox(
                               width: Tween<double>(begin: 0.0, end: 1.0)
                                       .animate(CurvedAnimation(
@@ -106,15 +97,6 @@ class _BottomBarViewState extends State<BottomBarView>
                                     widget.changeIndex(1);
                                   }),
                             ),
-                            // Expanded(
-                            //   child: TabIcons(
-                            //       tabIconData: widget.tabIconsList[3],
-                            //       removeAllSelect: () {
-                            //         setRemoveAllSelection(
-                            //             widget.tabIconsList[3]);
-                            //         widget.changeIndex(3);
-                            //       }),
-                            // ),
                           ],
                         ),
                       ),
@@ -150,10 +132,10 @@ class _BottomBarViewState extends State<BottomBarView>
                     child: Container(
                       // alignment: Alignment.center,s
                       decoration: BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: WeatherAppTheme.nearlyDarkBlue,
                         gradient: const LinearGradient(
                             colors: <Color>[
-                              FitnessAppTheme.nearlyDarkBlue,
+                              WeatherAppTheme.nearlyDarkBlue,
                               Color(0xFF6A88E5),
                             ],
                             begin: Alignment.topLeft,
@@ -161,7 +143,7 @@ class _BottomBarViewState extends State<BottomBarView>
                         shape: BoxShape.circle,
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                              color: FitnessAppTheme.nearlyDarkBlue
+                              color: WeatherAppTheme.nearlyDarkBlue
                                   .withOpacity(0.4),
                               offset: const Offset(8.0, 16.0),
                               blurRadius: 16.0),
@@ -178,14 +160,10 @@ class _BottomBarViewState extends State<BottomBarView>
                             setState(() {
                               widget.changeisWeatherDataReady(false);
                             });
-                            // setState(() {
-                            //   widget.isWeatherDataReady = false;
-                            // });
-                            // print("ontap :${widget.isWeatherDataReady}");
                           },
                           child: const Icon(
                             Icons.add,
-                            color: FitnessAppTheme.white,
+                            color: WeatherAppTheme.white,
                             size: 32,
                           ),
                         ),
@@ -292,7 +270,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 8,
                       height: 8,
                       decoration: const BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: WeatherAppTheme.nearlyDarkBlue,
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -312,7 +290,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 4,
                       height: 4,
                       decoration: const BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: WeatherAppTheme.nearlyDarkBlue,
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -332,7 +310,7 @@ class _TabIconsState extends State<TabIcons> with TickerProviderStateMixin {
                       width: 6,
                       height: 6,
                       decoration: const BoxDecoration(
-                        color: FitnessAppTheme.nearlyDarkBlue,
+                        color: WeatherAppTheme.nearlyDarkBlue,
                         shape: BoxShape.circle,
                       ),
                     ),
