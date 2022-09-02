@@ -9,3 +9,9 @@ It fetches data from https://weatherdbi.herokuapp.com/
 
 
 <img src="https://github.com/gokhankar/weather_forecast_flutter/blob/master/assets/screenshots/Screenshot_20220504-171121.jpg" alt="App pic" width="360" height="800">
+
+<img src="https://github.com/gokhankar/weather_forecast_flutter/blob/master/assets/screenshots/Screenshot_20220504-171142.jpg" alt="App pic" width="360" height="800">
+
+<img src="https://github.com/gokhankar/weather_forecast_flutter/blob/master/assets/screenshots/Screenshot_20220504-171208.jpg" alt="App pic" width="360" height="800">
+
+<img src="https://github.com/gokhankar/weather_forecast_flutter/blob/master/assets/screenshots/Screenshot_20220504-171219.jpg" alt="App pic" width="360" height="800">
